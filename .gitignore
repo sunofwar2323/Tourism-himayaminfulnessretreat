@@ -1,0 +1,10 @@
+.DS_Store
+node_modules/
+dist/
+.vercel/
+__pycache__/
+
+# Private research and source files. Keep them local; the build only needs tours-data.js.
+tours.json
+/website info*/
+Image/Logo/about-us-founder.jpeg

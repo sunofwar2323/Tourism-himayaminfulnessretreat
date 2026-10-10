@@ -1,0 +1,160 @@
+/* Himalaya Mindfulness Retreat — brand component layer.
+   Load last on every page, after tokens.css and the page stylesheets. Uses tokens only. */
+
+/* Typography */
+body{font-family:var(--font-body);color:var(--color-ink)}
+h1,h2,h3{font-family:var(--font-display);line-height:var(--line-height-heading)}
+.hero-content h1,.hero-title{font-size:var(--font-size-hero);font-weight:600;line-height:var(--line-height-heading);letter-spacing:-.015em}
+.page-hero h1,.detail-hero h1,.travel-hero-inner h1,.journey-cta h2,.detail-final-cta h2,.story-step h2,.dialog-image h2{font-size:var(--font-size-h1);font-weight:600;line-height:var(--line-height-heading);letter-spacing:-.01em}
+.section h2,.why-copy h2,.travel-aside h2,.contact-details h2,.cta-banner h2,.credentials h2,.finder-heading h2,.results-heading h2,.trust-header h2,.faq-inner h2,.festival-strip-heading h2,.detail-block h2,.detail-layout .prose h2,.guide-final-cta h2{font-size:var(--font-size-h2);font-weight:600;line-height:var(--line-height-heading);letter-spacing:-.01em}
+.destination-info h3,.package-info h3,.tour-card h3,.category-card h3,.value-grid h3,.team-grid h3,.trust-grid h3,.contact-form h3,.booking-card h3,.faq-row h3,.usp-list h3,.guide-section h3,.detail-layout .prose h3{font-size:var(--font-size-h3);font-weight:600;line-height:var(--line-height-heading);letter-spacing:0}
+.section h2,.why-copy h2,.travel-aside h2,.contact-details h2,.finder-heading h2,.results-heading h2,.trust-header h2,.faq-inner h2,.detail-block h2,.destination-info h3,.package-info h3,.tour-card h3,.category-card h3,.value-grid h3,.team-grid h3,.trust-grid h3,.contact-form h3,.booking-card h3,.faq-row h3,.usp-list h3{color:var(--color-midnight)}
+.category-band .section-heading h2{color:var(--color-white)}
+.footer-top h3{font-family:var(--font-body)}
+.page-hero .eyebrow,.detail-hero .eyebrow,.story-copy .eyebrow,.cta-banner .eyebrow,.stats-band .eyebrow,.credentials .eyebrow,.festival-strip-section .eyebrow,.guide-final-cta .guide-kicker,.dialog-image .eyebrow,.journey-cta .eyebrow,.detail-final-cta .eyebrow{color:var(--color-glacier)}
+/* Small eyebrows over photos and mid-gradient zones: Glacier drops below 4.5:1 there, so use Sky Wash */
+.home-hero .eyebrow,.hero-eyebrow,.page-hero .eyebrow,.detail-hero .eyebrow,.detail-hero .tour-category-tag,.travel-hero-inner .guide-eyebrow,.cta-banner .eyebrow,.credentials .eyebrow,.guide-final-cta .guide-kicker,.journey-cta .eyebrow,.detail-final-cta .eyebrow{color:var(--color-sky-wash)}
+h2 i,h2 em{color:var(--color-saffron-ink)}
+.category-band h2 i,.cta-banner h2 i,.credentials h2 i,.journey-cta h2 em,.detail-final-cta h2 em,.story-step h2 em,.dialog-image h2 em,.festival-strip-heading h2 em,.detail-hero h1 em{color:var(--color-saffron)}
+.eyebrow,.guide-eyebrow,.guide-kicker,.hero-eyebrow{font-family:var(--font-body);font-weight:700;text-transform:uppercase;letter-spacing:var(--tracking-eyebrow)}
+
+/* Hero overlay: brand gradient plus a left scrim so copy over bright snow stays AA */
+.home-shade,.story-shade{background:linear-gradient(180deg,rgba(2,13,31,.3) 0%,transparent 35%),linear-gradient(270deg,rgba(2,13,31,.5) 0%,transparent 14%),linear-gradient(90deg,rgba(2,13,31,.62) 0%,rgba(2,13,31,.28) 48%,transparent 72%),var(--grad-hero)}
+.journey-hero .hero-backdrop{background-image:linear-gradient(90deg,rgba(2,13,31,.6) 0%,rgba(2,13,31,.22) 50%,transparent 75%),var(--grad-hero),var(--hero-image)}
+.journey-cta:before,.detail-final-cta:before{background-image:linear-gradient(90deg,rgba(2,13,31,.6) 0%,rgba(2,13,31,.22) 50%,transparent 75%),var(--grad-hero),var(--cta-image)}
+.detail-hero-shade{background:linear-gradient(0deg,rgba(2,13,31,.55),transparent 60%),var(--grad-hero)}
+
+.home-hero .eyebrow,.hero-eyebrow,.page-hero .eyebrow,.travel-hero-inner .guide-eyebrow,.hero-caption,.hero-scroll,.hero-scroll-cue,.hero-side-note{text-shadow:0 1px 2px rgba(2,13,31,.85),0 0 16px rgba(2,13,31,.7)}
+
+/* Highlighted hero word */
+.hero-content h1 i,.hero-title em{background:var(--grad-text);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;font-weight:600;padding-right:.06em}
+.hero-title em .hero-char,.hero-title em .hero-word{background:inherit;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+
+/* Header */
+.header.is-scrolled{background-color:color-mix(in srgb,var(--color-midnight) 88%,transparent);box-shadow:0 10px 30px color-mix(in srgb,var(--color-abyss) 40%,transparent)}
+.header .nav a{position:relative;transition:color .25s}
+.header .nav a:after,.header .nav a[aria-current=page]:after{content:'';position:absolute;left:0;bottom:-8px;width:100%;height:2px;border-radius:2px;background:var(--color-glacier);transform:scaleX(0);transform-origin:left center;transition:transform .3s ease}
+.header .nav a:hover:after,.header .nav a[aria-current=page]:after{transform:scaleX(1)}
+@media(max-width:1030px){.header .nav a:after,.header .nav a[aria-current=page]:after{display:none}.header .nav a[aria-current=page]{color:var(--color-glacier)}.tours-page .header .header-cta{min-height:0}}
+@media(max-width:420px){.tours-page .header .header-cta{padding:8px;font-size:7px;gap:4px}}
+
+/* Primary buttons */
+.button,.guide-button-cream{position:relative;isolation:isolate;overflow:hidden;background-image:var(--grad-cta);background-size:180% 180%;background-position:0% 0%;color:var(--color-midnight);border-color:transparent;border-radius:var(--radius-pill)}
+.button:hover,.guide-button-cream:hover{background-position:100% 100%;box-shadow:var(--shadow-cta-glow);color:var(--color-midnight)}
+.button:after,.guide-button-cream:after{content:'';position:absolute;inset:0;z-index:-1;background:var(--grad-shimmer);transform:translateX(-120%);transition:transform .7s ease;pointer-events:none}
+.button:hover:after,.guide-button-cream:hover:after{transform:translateX(120%)}
+
+.guide-main a.guide-button{text-decoration:none}
+.guide-main a.guide-button-cream,.guide-main a.guide-button-cream:hover{color:var(--color-midnight)}
+.guide-main a.guide-button-outline,.guide-main a.guide-button-whatsapp{color:var(--color-white)}
+.guide-main a.guide-button-outline:hover,.guide-main a.guide-button-whatsapp:hover{color:var(--color-midnight)}
+
+/* Secondary buttons */
+.button-outline,.button-secondary-dark{background:transparent;border:1.5px solid var(--color-glacier);color:var(--color-white);box-shadow:none}
+.button-outline:hover,.button-secondary-dark:hover{background:var(--color-glacier);color:var(--color-midnight);box-shadow:none}
+.button-outline:after,.button-secondary:after,.button-secondary-dark:after{display:none}
+.button-secondary{background:transparent;border:1.5px solid var(--color-himalayan);color:var(--color-himalayan);box-shadow:none}
+.button-secondary:hover{background:var(--color-himalayan);color:var(--color-white);box-shadow:none}
+
+/* Cards */
+.package-card,.category-card{position:relative;overflow:hidden;background:var(--color-white);border:1px solid var(--color-sky-wash);border-radius:var(--radius-card);box-shadow:var(--shadow-card);transition:transform .35s cubic-bezier(.22,.75,.25,1),box-shadow .35s}
+.package-card:hover,.category-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-card-hover)}
+.package-card:after,.category-card:after{content:'';position:absolute;inset:0;background:var(--grad-cursor-glow);opacity:0;transition:opacity .25s;pointer-events:none}
+.package-card:hover:after,.category-card:hover:after{opacity:1}
+.tour-card:hover{box-shadow:var(--shadow-card-hover)}
+.destination-image,.team-grid img{border-radius:var(--radius-card)}
+.gallery-grid img{border-radius:14px}
+
+/* Dark sections */
+.category-band,.cta-banner,.stats-band,.credentials,.footer,.festival-strip-section,.guide-final-cta{color:var(--color-white)}
+.cta-banner p,.credentials p,.category-row small,.stats-band>div span,.festival-strip-heading p{color:var(--color-sky-wash)}
+.cta-banner{border-radius:var(--radius-card)}
+
+/* Prices and ratings */
+.rating,.stars{color:var(--color-saffron-ink);letter-spacing:.08em}
+.category-band .rating,.footer .rating,.journey-hero .rating{color:var(--color-saffron)}
+
+/* Links in body copy */
+.prose a:not(.button):not(.text-link),.intro-note p a,.faq-row a,.contact-details>p a{color:var(--color-himalayan);text-decoration:underline;text-decoration-color:var(--color-sky-wash);text-underline-offset:3px;transition:text-decoration-color .2s}
+.prose a:not(.button):not(.text-link):hover,.intro-note p a:hover,.faq-row a:hover,.contact-details>p a:hover{text-decoration-color:currentColor}
+
+/* Focus: Glacier ring plus a Midnight inner edge, so it reads on light and dark */
+:where(a,button,summary,[tabindex]):focus-visible{outline:var(--focus-outline);outline-offset:var(--focus-offset);box-shadow:0 0 0 2px var(--color-midnight)}
+.tours-page :where(a,button,summary,[tabindex]):focus-visible{box-shadow:0 0 0 2px var(--color-midnight)}
+
+/* Form fields */
+.contact-form :where(input,select,textarea),.journey-form :where(input,select,textarea),.booking-enquiry input,.field{background:var(--color-white);border:1px solid var(--color-sky-wash);border-radius:10px;color:var(--color-ink);transition:border-color .2s,box-shadow .2s}
+:where(.contact-form,.journey-form,.booking-enquiry,.trip-search,.package-filters,.finder-controls,.styleguide) :where(input,select,textarea):focus-visible,.field:focus-visible{outline:none;border-color:var(--color-himalayan);box-shadow:var(--focus-ring)}
+:where(input,select,textarea):user-invalid,:where(input,select,textarea)[aria-invalid=true],.field.is-error{border-color:var(--color-danger);box-shadow:0 0 0 4px color-mix(in srgb,var(--color-danger) 18%,transparent)}
+.field.is-success,:where(input,select,textarea).is-success{border-color:var(--color-success);box-shadow:0 0 0 4px color-mix(in srgb,var(--color-success) 18%,transparent)}
+.field-message{display:block;margin-top:6px;font-size:12px;font-weight:600}
+.field-message.is-error{color:var(--color-danger)}
+.field-message.is-success{color:var(--color-success)}
+.newsletter-row:focus-within{border-bottom-color:var(--color-glacier)}
+.newsletter-row input:focus-visible{outline:none;box-shadow:none}
+
+/* Badges and chips */
+.chip,.badge{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:var(--radius-pill);background:var(--color-mist);color:var(--color-himalayan);font-size:11px;font-weight:700;letter-spacing:.04em}
+
+/* Mountain-silhouette dividers */
+.quote-section,.faq-section,.values-section,.footer{position:relative}
+.quote-section:before,.faq-section:before,.values-section:before,.footer:before{content:'';position:absolute;left:0;right:0;top:0;height:clamp(36px,5vw,72px);background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 80' preserveAspectRatio='none'%3E%3Cpath fill='%236CA0D2' fill-opacity='.15' d='M0 80V58l90-24 70 18 110-44 80 30 60-14 130 38 120-50 90 34 70-18 140 40 110-46 90 26 80-16 110 30 90-22V80Z'/%3E%3C/svg%3E") center bottom/100% 100% no-repeat;transform:scaleY(-1);pointer-events:none}
+.values-section:before{left:34px;right:34px}
+
+/* Lotus watermark in the footer (white at 4% because Midnight would not register on the dark footer) */
+.footer:after{content:'';position:absolute;right:max(4vw,20px);bottom:24px;width:min(420px,46vw);aspect-ratio:640/453;background:var(--color-white);opacity:.04;-webkit-mask:url("Image/Logo/logo-light.png") center/contain no-repeat;mask:url("Image/Logo/logo-light.png") center/contain no-repeat;pointer-events:none}
+.footer>*{position:relative;z-index:1}
+
+/* Floating enquiry */
+.whatsapp{transition:transform .25s,box-shadow .25s}
+.whatsapp:hover{transform:translateY(-2px);box-shadow:var(--shadow-cta-glow)}
+
+@media(prefers-reduced-motion:reduce){
+  .button,.guide-button,.guide-button-cream,.package-card,.category-card,.tour-card,.whatsapp,.header .nav a:after{transition:none!important}
+  .button:hover,.guide-button:hover,.package-card:hover,.category-card:hover,.whatsapp:hover,.glossary-card:hover,.arrival-card:hover,.resource-card:hover{transform:none!important}
+  .button:after,.guide-button-cream:after,.package-card:after,.category-card:after{display:none}
+  html{scroll-behavior:auto}
+}
+
+/* Launch fixes: touch targets, footer planning column, legal pages, photo credits, no-JS note */
+.header .menu-toggle{min-width:44px;min-height:44px;display:none;align-items:center;justify-content:center;cursor:pointer}
+@media(max-width:1030px){.header .menu-toggle{display:inline-flex}}
+.header .menu-toggle:focus-visible{outline:var(--focus-outline);outline-offset:var(--focus-offset)}
+.honeypot{position:absolute!important;left:-10000px!important;width:1px!important;height:1px!important;opacity:0!important}
+.footer-plan{display:flex;flex-direction:column;align-items:flex-start}
+.footer-top>div>a.footer-plan-link{display:inline-flex;align-items:center;gap:8px;margin-top:4px;padding:11px 18px;border-radius:var(--radius-pill);background:var(--grad-cta);color:var(--color-abyss);font-weight:700;font-size:14px;min-height:44px}
+.footer-top>div>a.footer-plan-link:hover{color:var(--color-abyss);box-shadow:var(--shadow-cta-glow)}
+.footer-legal{display:flex;gap:18px;flex-wrap:wrap}
+.footer-legal a{color:var(--color-sky-wash);text-decoration:underline;text-underline-offset:3px;padding:6px 0}
+.footer-legal a:hover{color:var(--color-snow)}
+.page-hero-credit,.travel-hero-credit{position:absolute;z-index:3;right:max(4vw,14px);bottom:12px;margin:0;max-width:calc(100% - 28px);font-size:11px;line-height:1.4;letter-spacing:.02em;color:var(--color-dark-text);text-shadow:0 1px 2px rgba(2,13,31,.9);text-align:right}
+.page-hero-credit a,.travel-hero-credit a{color:inherit;text-decoration:underline;text-underline-offset:2px}
+.travel-guide-hero .hero-photo-caption{display:none}
+.legal-main{background:var(--grad-mist);padding:clamp(48px,8vw,96px) 20px clamp(64px,9vw,112px)}
+.legal{max-width:760px;margin:0 auto;background:var(--color-white);border-radius:var(--radius-card);box-shadow:var(--shadow-card);padding:clamp(28px,5vw,56px);color:var(--color-ink)}
+.legal h1{font:600 var(--font-size-h1)/var(--line-height-heading) var(--font-display);color:var(--color-midnight);margin:8px 0 10px;letter-spacing:-.01em}
+.legal h2{font:600 clamp(1.4rem,2.4vw,1.75rem)/1.2 var(--font-display);color:var(--color-midnight);margin:36px 0 10px}
+.legal p,.legal li{font-size:var(--font-size-body);line-height:var(--line-height-body)}
+.legal ul{padding-left:1.25em;margin:10px 0 16px}
+.legal li+li{margin-top:6px}
+.legal a{color:var(--color-himalayan);text-decoration:underline;text-underline-offset:3px;overflow-wrap:anywhere}
+.legal a:hover{color:var(--color-midnight)}
+.legal-crumbs{font-size:14px;color:var(--color-slate)}
+.legal-crumbs a{color:var(--color-slate)}
+.legal-updated{font-size:14px!important;color:var(--color-saffron-ink);font-weight:700;letter-spacing:.06em;text-transform:uppercase;margin:0}
+.legal-lead{font-size:clamp(1.05rem,.5vw + 1rem,1.2rem)!important;color:var(--color-slate)}
+.notfound-links{list-style:none;padding:0!important;display:grid;gap:10px}
+.notfound-links a{display:flex;align-items:center;min-height:48px;padding:10px 18px;border:1px solid var(--color-sky-wash);border-radius:14px;text-decoration:none;font-weight:600;color:var(--color-midnight)}
+.notfound-links a:hover{border-color:var(--color-himalayan);background:var(--color-mist)}
+.noscript-note{max-width:760px;margin:clamp(40px,8vw,88px) auto;padding:28px;border-radius:var(--radius-card);background:var(--color-white);box-shadow:var(--shadow-card);color:var(--color-ink);text-align:center}
+.noscript-note h1{font:600 clamp(1.8rem,4vw,2.6rem)/1.15 var(--font-display);color:var(--color-midnight);margin:0 0 10px}
+.noscript-note a{color:var(--color-himalayan);font-weight:700}
+.noscript-brand{font-weight:700;color:var(--color-midnight);letter-spacing:.04em}
+@media(max-width:560px){
+  html body :is(.travel-hero-inner>p,.section-deck,.accordion-answer p,.accordion-answer li,.confirm-list li,.booking-process li,.application-block li,.resource-card p,.core-note p,.result-note p,.important-notice p,.guide-final-cta p,.guide-disclaimer,.faq-row article p,.contact-details>p,.contact-form .form-note,.booking-panel-foot,.itinerary-note,.route-note,.detail-muted,.tour-card-summary,.itinerary-day-body li,.footer-top .footer-plan p,.dc-list-note,.ab-licence-note,.hm-fine,.hm-source,.hm-planner-status,.dc-attraction-tours){font-size:15px;line-height:1.6}
+}
+.footer-bottom{padding-right:190px}
+@media(max-width:800px){.footer-bottom{padding-right:0;padding-bottom:64px}}
+@media(max-width:400px){.header .header-cta{display:none}.header .menu-toggle{grid-column:2/4;justify-self:end}}
+main#main:not([data-static]){min-height:100vh}
+#site-header:empty{display:block;height:74px;background:var(--color-midnight)}@media(min-width:1031px){#site-header:empty{height:126px}}

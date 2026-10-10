@@ -1,0 +1,92 @@
+/* Himalaya Mindfulness Retreat — brand tokens (single source of truth).
+   Load before every other stylesheet. Page stylesheets reference these variables only. */
+
+/* Metric-matched fallbacks keep text from shifting while the web fonts load. */
+@font-face{font-family:"Cormorant Garamond Fallback";src:local("Georgia");size-adjust:89%;ascent-override:104%;descent-override:32%;line-gap-override:0%}
+@font-face{font-family:"Manrope Fallback";src:local("Arial");size-adjust:104%;ascent-override:102%;descent-override:29%;line-gap-override:0%}
+
+:root{
+  /* Colour */
+  --color-midnight:#051A38;
+  --color-abyss:#020D1F;
+  --color-himalayan:#2F5F94;
+  --color-glacier:#6CA0D2;
+  --color-sky-wash:#CFE1F3;
+  --color-mist:#EAF2FA;
+  --color-snow:#F7FAFD;
+  --color-saffron:#E8A33D;
+  --color-saffron-deep:#C9871F;
+  --color-ink:#0B1F3A;
+  --color-slate:#5B6F8A;
+  --color-success:#2E8B6E;
+  --color-danger:#B8403A;
+  --color-white:#FFFFFF;
+  /* Saffron-deep measures 2.9:1 on Snow, so saffron text on light surfaces uses this instead (5.0:1 Snow, 4.7:1 Mist). */
+  --color-saffron-ink:#96600D;
+  --color-dark-text:#E6EEF8;
+
+  /* Gradients */
+  --grad-hero:linear-gradient(180deg,rgba(2,13,31,.15) 0%,rgba(5,26,56,.55) 55%,#051A38 100%);
+  --grad-sky:linear-gradient(135deg,#051A38 0%,#2F5F94 55%,#6CA0D2 100%);
+  --grad-dawn:linear-gradient(160deg,#051A38 0%,#2F5F94 50%,#6CA0D2 78%,#F3D9A8 100%);
+  --grad-mist:linear-gradient(180deg,#F7FAFD 0%,#EAF2FA 100%);
+  --grad-cta:linear-gradient(135deg,#F2B84F 0%,#E8A33D 50%,#C9871F 100%);
+  --grad-text:linear-gradient(90deg,#6CA0D2 0%,#BFD9F2 50%,#F2B84F 100%);
+  --grad-glass:linear-gradient(135deg,rgba(255,255,255,.14),rgba(255,255,255,.04));
+  /* Abyss scrims keep white and #CFE1F3 text at AA on Sky/Dawn. Dawn's peach corner stays clear, so keep text out of it. */
+  --grad-scrim-sky:linear-gradient(135deg,rgba(2,13,31,0) 0%,rgba(2,13,31,.42) 55%,rgba(2,13,31,.7) 100%);
+  --grad-scrim-dawn:linear-gradient(160deg,rgba(2,13,31,0) 0%,rgba(2,13,31,.3) 45%,rgba(2,13,31,.12) 75%,rgba(2,13,31,0) 100%);
+  --surface-sky:var(--grad-scrim-sky),var(--grad-sky);
+  --surface-dawn:var(--grad-scrim-dawn),var(--grad-dawn);
+  --grad-overlay-left:linear-gradient(90deg,color-mix(in srgb,var(--color-abyss) 82%,transparent),color-mix(in srgb,var(--color-abyss) 42%,transparent) 60%,transparent);
+  --grad-overlay-bottom:linear-gradient(0deg,color-mix(in srgb,var(--color-abyss) 40%,transparent),transparent 62%);
+  --grad-photo-overlay:var(--grad-overlay-left),var(--grad-overlay-bottom);
+  --grad-image-shade:linear-gradient(180deg,color-mix(in srgb,var(--color-abyss) 24%,transparent),transparent 35%,color-mix(in srgb,var(--color-abyss) 70%,transparent));
+  --grad-glacier-glow:radial-gradient(circle,color-mix(in srgb,var(--color-glacier) 20%,transparent),transparent 70%);
+  --grad-atmosphere:radial-gradient(ellipse at 20% 78%,color-mix(in srgb,var(--color-glacier) 22%,transparent) 0,transparent 39%),radial-gradient(ellipse at 77% 36%,color-mix(in srgb,var(--color-sky-wash) 18%,transparent) 0,transparent 40%);
+  --grad-cursor-glow:radial-gradient(circle at var(--glow-x,50%) var(--glow-y,50%),color-mix(in srgb,var(--color-glacier) 16%,transparent) 0,transparent 34%);
+  --grad-shimmer:linear-gradient(110deg,transparent 0%,rgba(255,255,255,.55) 48%,transparent 100%);
+
+  /* Typography */
+  --font-display:"Cormorant Garamond","Cormorant Garamond Fallback",Georgia,serif;
+  --font-body:"Manrope","Manrope Fallback",system-ui,sans-serif;
+  --font-size-hero:clamp(2.75rem,7vw,6.5rem);
+  --font-size-h1:clamp(2.25rem,5vw,4.25rem);
+  --font-size-h2:clamp(1.75rem,3.5vw,3rem);
+  --font-size-h3:clamp(1.25rem,2vw,1.75rem);
+  --font-size-body:clamp(1rem,.35vw + .95rem,1.125rem);
+  --line-height-heading:1.1;
+  --line-height-body:1.65;
+  --tracking-eyebrow:.18em;
+
+  /* Shape, depth, focus */
+  --radius-pill:999px;
+  --radius-card:20px;
+  --shadow-card:0 10px 40px rgba(5,26,56,.08);
+  --shadow-card-hover:0 18px 50px rgba(5,26,56,.14);
+  --shadow-cta-glow:0 10px 30px rgba(232,163,61,.35);
+  --surface-shadow:var(--shadow-card);
+  --surface-shadow-hover:var(--shadow-card-hover);
+  --focus-ring:0 0 0 4px rgba(108,160,210,.25);
+  --focus-outline:2px solid var(--color-glacier);
+  --focus-offset:2px;
+
+  /* Legacy aliases used by existing page stylesheets */
+  --green:var(--color-midnight);
+  --green2:var(--color-himalayan);
+  --sage:var(--color-mist);
+  --gold:var(--color-saffron);
+  --cream:var(--color-mist);
+  --ink:var(--color-ink);
+  --muted:var(--color-slate);
+  --line:var(--color-sky-wash);
+  --serif:var(--font-display);
+  --sans:var(--font-body);
+  --max:1240px;
+
+  /* Dark palette (only the Travel Information page supports dark mode) */
+  --dark-bg:var(--color-abyss);
+  --dark-surface:var(--color-midnight);
+  --dark-text:#E6EEF8;
+  --dark-line:color-mix(in srgb,var(--color-glacier) 22%,transparent);
+}

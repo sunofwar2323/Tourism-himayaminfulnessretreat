@@ -1,0 +1,251 @@
+/* Destinations, destination guides and categories. Builds on journeys.css; every rule is scoped to .discover-page. */
+
+.discover-page .dc-main :where(h1,h2,h3,p,ul,ol,dl,dd,figure,nav){margin:0}
+.discover-page .dc-main a{text-underline-offset:4px}
+.discover-page .jr-title{outline:none}
+.discover-page .dc-main h1:focus-visible{outline:2px solid var(--color-saffron-deep);outline-offset:6px}
+
+.discover-page .dc-meta{display:flex;flex-wrap:wrap;gap:4px 14px;font:700 .68rem/1.5 var(--font-body);letter-spacing:.16em;text-transform:uppercase;color:var(--color-saffron-ink)}
+.discover-page .dc-meta span+span{color:var(--color-slate)}
+.discover-page .dc-meta span+span::before{content:'';display:inline-block;width:14px;height:1px;margin:0 12px 0 -2px;vertical-align:middle;background:currentColor;opacity:.6}
+
+/* ---------- Breadcrumbs ---------- */
+.discover-page .dc-crumbs{margin-bottom:clamp(28px,3vw,40px)}
+.discover-page .dc-crumbs ol{display:flex;flex-wrap:wrap;gap:6px 0;margin:0;padding:0;list-style:none;font:600 .74rem/1.4 var(--font-body);letter-spacing:.06em;color:var(--color-slate)}
+.discover-page .dc-crumbs li+li::before{content:'/';margin:0 10px;opacity:.5}
+.discover-page .dc-crumbs a{color:var(--color-midnight);text-decoration:underline;text-decoration-color:transparent;transition:text-decoration-color .2s}
+.discover-page .dc-crumbs a:hover{text-decoration-color:var(--color-saffron-deep)}
+.discover-page .dc-crumbs [aria-current]{color:var(--color-slate)}
+
+/* ---------- Overview hero ---------- */
+.discover-page .dc-hero{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(20px,2.4vw,36px);align-items:center;padding:clamp(40px,6vw,88px) var(--jr-pad) clamp(64px,7vw,104px)}
+.discover-page .dc-hero-copy{grid-column:1/7}
+.discover-page .dc-hero-compact .dc-hero-copy{grid-column:1/10}
+.discover-page .dc-hero-note{margin-top:30px;padding-top:16px;border-top:1px solid var(--color-midnight);max-width:440px;font:700 .7rem/1.4 var(--font-body);letter-spacing:.16em;text-transform:uppercase;color:var(--color-midnight)}
+.discover-page .dc-notice{margin-top:24px;padding:14px 18px;border-left:3px solid var(--color-saffron-deep);background:var(--color-mist);color:var(--color-ink);max-width:52ch}
+.discover-page .dc-hero-media{grid-column:8/13}
+.discover-page .dc-hero-frame{overflow:hidden;aspect-ratio:4/5;max-height:72vh;background:var(--color-mist)}
+.discover-page .dc-hero-frame img{width:100%;height:100%;object-fit:cover}
+.discover-page .dc-hero-media figcaption{margin-top:14px;text-align:right;font:600 .7rem/1.4 var(--font-body);letter-spacing:.16em;text-transform:uppercase;color:var(--color-slate)}
+
+/* ---------- Destination list ---------- */
+.discover-page .dc-list{padding:clamp(24px,3vw,40px) var(--jr-pad) clamp(88px,10vw,140px)}
+.discover-page .dc-list-head{display:grid;gap:clamp(24px,3vw,36px)}
+.discover-page .dc-list-head h2,.discover-page .dc-section-head h2,.discover-page .dc-about h2,.discover-page .dc-story h2{font-size:clamp(2.2rem,4.4vw,4rem)}
+.discover-page .dc-count{font:700 .72rem/1.4 var(--font-body);letter-spacing:.16em;text-transform:uppercase;color:var(--color-slate)}
+.discover-page .dc-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:clamp(28px,4vw,72px);row-gap:clamp(64px,7vw,112px);margin:clamp(40px,5vw,64px) 0 0;padding:0;list-style:none}
+.discover-page .dc-card[hidden]{display:none}
+.discover-page .dc-card:nth-child(even of :not([hidden])){padding-top:clamp(48px,7vw,120px)}
+.discover-page .dc-card article{display:flex;flex-direction:column;height:100%}
+.discover-page .dc-card-media{position:relative;display:block;overflow:hidden;aspect-ratio:4/5;background:var(--color-mist)}
+.discover-page .dc-card-media img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s var(--jr-ease)}
+.discover-page .dc-card-no{position:absolute;left:18px;top:14px;font:500 clamp(2rem,3vw,2.8rem)/1 var(--font-display);color:var(--color-white);text-shadow:0 2px 18px color-mix(in srgb,var(--color-abyss) 55%,transparent)}
+.discover-page .dc-card-body{display:flex;flex:1;flex-direction:column;padding-top:24px}
+.discover-page .dc-card-title{margin-top:10px;font:600 clamp(2rem,3.2vw,3rem)/1 var(--font-display);color:var(--color-midnight)}
+.discover-page .dc-card-title a{color:inherit;text-decoration:none;background:linear-gradient(currentColor,currentColor) left bottom/0 1px no-repeat;transition:background-size .55s var(--jr-ease)}
+.discover-page .dc-card-text{max-width:52ch;margin-top:14px;line-height:1.7;color:var(--color-ink)}
+.discover-page .dc-card-highlights{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 0;padding:0;list-style:none}
+.discover-page .dc-card-highlights li{padding:7px 14px;border:1px solid color-mix(in srgb,var(--color-midnight) 16%,transparent);border-radius:var(--radius-pill);font-size:.84rem;color:var(--color-midnight)}
+.discover-page .dc-card-cta{align-self:flex-start;margin-top:24px}
+.discover-page .dc-card-cta{border-bottom:0;background:linear-gradient(currentColor,currentColor) left bottom/100% 1px no-repeat;text-decoration:none}
+.discover-page .dc-list-note{max-width:78ch;margin-top:clamp(64px,7vw,104px);padding-top:20px;border-top:var(--jr-line);font-size:.86rem;line-height:1.65;color:var(--color-slate)}
+@media (hover:hover){
+  .discover-page .dc-card:hover .dc-card-media img,.discover-page .dc-cat:hover .dc-cat-media img,.discover-page .dc-attraction:hover .dc-attraction-media img{transform:scale(1.045)}
+  .discover-page .dc-card:hover .dc-card-title a,.discover-page .dc-cat:hover .dc-cat-link{background-size:100% 1px}
+  .discover-page .dc-cat:hover .jr-card-cta{color:var(--color-saffron-ink)}
+  .discover-page .dc-cat:hover .jr-card-cta i{width:36px}
+}
+.discover-page .dc-card-title a:focus-visible,.discover-page .dc-cat-link:focus-visible{background-size:100% 1px}
+
+/* ---------- Destination guide hero ---------- */
+.discover-page .dc-dhero{position:relative;display:flex;align-items:flex-end;min-height:clamp(540px,80svh,860px);overflow:hidden;background:var(--color-abyss);color:var(--color-white)}
+.discover-page .dc-dhero-media{position:absolute;inset:0}
+.discover-page .dc-dhero-media img{width:100%;height:100%;object-fit:cover}
+.discover-page .dc-dhero-shade{position:absolute;inset:0;background:linear-gradient(90deg,color-mix(in srgb,var(--color-abyss) 62%,transparent) 0%,color-mix(in srgb,var(--color-abyss) 30%,transparent) 48%,transparent 75%),linear-gradient(180deg,color-mix(in srgb,var(--color-abyss) 30%,transparent) 0%,transparent 28%,color-mix(in srgb,var(--color-abyss) 50%,transparent) 60%,color-mix(in srgb,var(--color-abyss) 88%,transparent) 100%)}
+.discover-page .dc-dhero .jr-eyebrow,.discover-page .dc-dhero .dc-crumbs{text-shadow:0 1px 12px color-mix(in srgb,var(--color-abyss) 70%,transparent)}
+.discover-page .dc-dhero-inner{position:relative;width:100%;padding:clamp(40px,6vw,88px) var(--jr-pad) clamp(40px,5vw,72px)}
+.discover-page .dc-dhero .dc-crumbs ol,.discover-page .dc-dhero .dc-crumbs [aria-current]{color:var(--color-sky-wash)}
+.discover-page .dc-dhero .dc-crumbs a{color:var(--color-white)}
+.discover-page .dc-dhero-title{font:600 clamp(3.6rem,10vw,9rem)/.9 var(--font-display);letter-spacing:-.02em;color:var(--color-white)}
+.discover-page .dc-dhero-lede{max-width:52ch;margin-top:22px;font-size:clamp(1.04rem,.4vw + .96rem,1.22rem);line-height:1.65;color:var(--color-dark-text)}
+.discover-page .dc-dhero-facts{display:flex;flex-wrap:wrap;gap:16px clamp(32px,5vw,72px);margin-top:clamp(32px,4vw,52px);padding-top:22px;border-top:var(--jr-line-dark)}
+.discover-page .dc-dhero-facts dt{font:700 .66rem/1.4 var(--font-body);letter-spacing:.16em;text-transform:uppercase;color:var(--color-glacier)}
+.discover-page .dc-dhero-facts dd{margin-top:6px;font:600 1.4rem/1.2 var(--font-display);color:var(--color-white)}
+
+.discover-page .dc-subnav{position:sticky;top:var(--dc-head,0px);z-index:5;border-bottom:var(--jr-line);background:color-mix(in srgb,var(--color-snow) 94%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.discover-page .dc-subnav ul{display:flex;gap:clamp(20px,3vw,40px);margin:0;padding:0 var(--jr-pad);list-style:none;overflow-x:auto;scrollbar-width:none}
+.discover-page .dc-subnav ul::-webkit-scrollbar{display:none}
+.discover-page .dc-subnav a{display:inline-flex;align-items:center;min-height:52px;font:600 .9rem/1.2 var(--font-body);white-space:nowrap;color:var(--color-slate);text-decoration:none;border-bottom:2px solid transparent;transition:color .25s,border-color .25s}
+.discover-page .dc-subnav a:hover,.discover-page .dc-subnav a:focus-visible{color:var(--color-midnight);border-color:var(--color-saffron-deep)}
+.discover-page :where(#history,#about,#places,#experiences,#when,#journeys,#plan){scroll-margin-top:calc(var(--dc-head,0px) + 72px)}
+
+/* ---------- History ---------- */
+.discover-page .dc-story{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(20px,2.4vw,36px);align-items:center;padding:clamp(88px,10vw,150px) var(--jr-pad)}
+.discover-page .dc-story-copy{grid-column:1/7}
+.discover-page .dc-story-copy p:not(.jr-eyebrow){max-width:60ch;margin-top:22px;font-size:1.04rem;line-height:1.8;color:var(--color-ink)}
+.discover-page .dc-story-copy h2+p{margin-top:30px}
+.discover-page .dc-story-media{grid-column:8/13}
+.discover-page .dc-story-frame{overflow:hidden;aspect-ratio:4/5;background:var(--color-mist)}
+.discover-page .dc-story-frame img{width:100%;height:100%;object-fit:cover}
+.discover-page .dc-story-media figcaption{margin-top:14px;font:600 .7rem/1.4 var(--font-body);letter-spacing:.16em;text-transform:uppercase;color:var(--color-slate)}
+
+/* ---------- About ---------- */
+.discover-page .dc-about{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(20px,2.4vw,36px);row-gap:28px;padding:clamp(72px,8vw,120px) var(--jr-pad);background:var(--color-mist)}
+.discover-page .dc-about-head{grid-column:1/5}
+.discover-page .dc-about-copy{grid-column:5/10}
+.discover-page .dc-about-copy p{line-height:1.8;color:var(--color-ink)}
+.discover-page .dc-about-copy p+p{margin-top:18px}
+.discover-page .dc-about-highlights{grid-column:10/13;align-self:start;margin:0;padding:0;list-style:none;border-top:1px solid var(--color-midnight)}
+.discover-page .dc-about-highlights li{display:flex;gap:14px;align-items:baseline;padding:14px 0;border-bottom:var(--jr-line);font:600 1.2rem/1.25 var(--font-display);color:var(--color-midnight)}
+.discover-page .dc-about-highlights span{font:700 .7rem/1 var(--font-body);letter-spacing:.12em;color:var(--color-saffron-ink)}
+
+/* ---------- Places to visit ---------- */
+.discover-page .dc-places{padding:clamp(88px,10vw,150px) var(--jr-pad)}
+.discover-page .dc-section-head{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(20px,2.4vw,36px);align-items:end}
+.discover-page .dc-section-head>.jr-eyebrow,.discover-page .dc-section-head>h2{grid-column:1/8}
+.discover-page .dc-section-head>p:not(.jr-eyebrow){grid-column:9/13;grid-row:1/3;align-self:end;line-height:1.7;color:var(--color-slate)}
+.discover-page .dc-attractions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(48px,5vw,72px) clamp(20px,2.4vw,36px);margin:clamp(44px,5vw,72px) 0 0;padding:0;list-style:none}
+.discover-page .dc-attraction-media{overflow:hidden;aspect-ratio:4/3;background:var(--color-mist)}
+.discover-page .dc-attraction-media img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s var(--jr-ease)}
+.discover-page .dc-attraction h3{margin-top:20px;font:600 clamp(1.4rem,1.8vw,1.75rem)/1.15 var(--font-display);color:var(--color-midnight)}
+.discover-page .dc-attraction>p{margin-top:10px;line-height:1.7;color:var(--color-ink)}
+.discover-page .dc-attraction .dc-attraction-info,.discover-page .dc-attraction .dc-attraction-tours{margin-top:14px;padding-top:12px;border-top:var(--jr-line);font-size:.9rem;line-height:1.6;color:var(--color-slate)}
+.discover-page .dc-attraction-info span,.discover-page .dc-attraction-tours span{display:block;margin-bottom:4px;font:700 .64rem/1.4 var(--font-body);letter-spacing:.16em;text-transform:uppercase;color:var(--color-saffron-ink)}
+.discover-page .dc-attraction-tours a{color:var(--color-himalayan);text-decoration:underline;text-decoration-color:color-mix(in srgb,currentColor 35%,transparent)}
+.discover-page .dc-attraction-tours a:hover{text-decoration-color:currentColor}
+
+/* ---------- Experiences ---------- */
+.discover-page .dc-experiences{padding:clamp(88px,10vw,150px) var(--jr-pad);background:var(--color-midnight);color:var(--color-dark-text)}
+.discover-page .dc-experiences h2{color:var(--color-white)}
+.discover-page .dc-experiences h2 em{color:var(--color-saffron)}
+.discover-page .dc-experiences .dc-section-head>p:not(.jr-eyebrow){color:var(--color-sky-wash)}
+.discover-page .dc-experience-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:clamp(28px,3vw,48px);margin:clamp(44px,5vw,72px) 0 0;padding:0;list-style:none}
+.discover-page .dc-experience-list li{padding-top:22px;border-top:var(--jr-line-dark)}
+.discover-page .dc-experience-list span{font:500 2.4rem/1 var(--font-display);color:var(--color-saffron)}
+.discover-page .dc-experience-list h3{margin-top:16px;font:600 1.6rem/1.15 var(--font-display);color:var(--color-white)}
+.discover-page .dc-experience-list p{margin-top:10px;line-height:1.7;color:var(--color-sky-wash)}
+
+/* ---------- Seasons ---------- */
+.discover-page .dc-seasons{padding:clamp(88px,10vw,150px) var(--jr-pad) clamp(40px,5vw,72px)}
+.discover-page .dc-season-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(20px,2.4vw,36px);margin:clamp(44px,5vw,64px) 0 0;padding:0;list-style:none}
+.discover-page .dc-season-grid li{padding:24px 0 0;border-top:1px solid var(--color-midnight)}
+.discover-page .dc-season-grid h3{font:600 1.7rem/1.1 var(--font-display);color:var(--color-midnight)}
+.discover-page .dc-season-grid small{display:block;margin-top:6px;font:700 .68rem/1.4 var(--font-body);letter-spacing:.16em;text-transform:uppercase;color:var(--color-saffron-ink)}
+.discover-page .dc-season-grid p{margin-top:12px;line-height:1.65;color:var(--color-ink)}
+.discover-page .dc-season-note{display:flex;flex-wrap:wrap;gap:6px 18px;align-items:baseline;margin-top:clamp(36px,4vw,52px);padding:20px 24px;border-left:3px solid var(--color-saffron-deep);background:var(--color-mist);line-height:1.6;color:var(--color-ink)}
+.discover-page .dc-season-note span{font:700 .68rem/1.4 var(--font-body);letter-spacing:.16em;text-transform:uppercase;color:var(--color-midnight)}
+.discover-page .dc-season-tours{margin-top:clamp(36px,4vw,52px)}
+.discover-page .dc-season-tours h3{font:700 .7rem/1.4 var(--font-body);letter-spacing:.16em;text-transform:uppercase;color:var(--color-slate)}
+.discover-page .dc-season-tours ul{margin:14px 0 0;padding:0;list-style:none;border-top:var(--jr-line)}
+.discover-page .dc-season-tours li{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:8px 24px;padding:14px 0;border-bottom:var(--jr-line)}
+.discover-page .dc-season-tours a{font:600 1.15rem/1.3 var(--font-display);color:var(--color-midnight);text-decoration:none}
+.discover-page .dc-season-tours a:hover{color:var(--color-saffron-ink)}
+.discover-page .dc-season-tours li span{font-size:.92rem;line-height:1.6;color:var(--color-slate)}
+
+/* ---------- Journeys, closing, more destinations ---------- */
+.discover-page .dc-journeys{padding-top:clamp(72px,8vw,120px)}
+.discover-page .dc-journeys .jr-results{margin-top:clamp(40px,5vw,64px)}
+.discover-page .dc-more{padding:clamp(56px,6vw,88px) var(--jr-pad);border-top:var(--jr-line)}
+.discover-page .dc-more h2{font:700 .72rem/1.4 var(--font-body);letter-spacing:.16em;text-transform:uppercase;color:var(--color-slate)}
+.discover-page .dc-more-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:0 clamp(20px,2.4vw,36px);margin:20px 0 0;padding:0;list-style:none}
+.discover-page .dc-more-list a{display:flex;align-items:baseline;justify-content:space-between;gap:12px;min-height:56px;padding:14px 0;border-bottom:var(--jr-line);color:var(--color-midnight);text-decoration:none;transition:color .3s,padding .45s var(--jr-ease)}
+.discover-page .dc-more-list span{font:600 1.35rem/1.2 var(--font-display)}
+.discover-page .dc-more-list small{font:600 .72rem/1.3 var(--font-body);color:var(--color-slate)}
+.discover-page .dc-more-list a:hover{padding-left:8px;color:var(--color-saffron-ink)}
+.discover-page .dc-missing{padding:clamp(48px,7vw,104px) var(--jr-pad) clamp(88px,10vw,140px)}
+.discover-page .dc-missing .jr-title{font-size:clamp(2.6rem,5.4vw,5rem)}
+.discover-page .dc-missing .dc-more-list{margin:clamp(36px,4vw,52px) 0 32px}
+
+/* ---------- Categories ---------- */
+.discover-page .dc-cats{padding:0 var(--jr-pad) clamp(88px,10vw,140px)}
+.discover-page .dc-cat-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:clamp(28px,4vw,72px);row-gap:clamp(64px,7vw,104px);margin:0;padding:0;list-style:none}
+.discover-page .dc-cat:nth-child(even){padding-top:clamp(48px,7vw,120px)}
+.discover-page .dc-cat article{position:relative}
+.discover-page .dc-cat-media{overflow:hidden;aspect-ratio:5/4;background:var(--color-mist)}
+.discover-page .dc-cat-media img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s var(--jr-ease)}
+.discover-page .dc-cat-body{padding-top:24px}
+.discover-page .dc-cat h2{margin-top:10px;font:600 clamp(2rem,3.2vw,3rem)/1.02 var(--font-display);color:var(--color-midnight)}
+.discover-page .dc-cat-link{color:inherit;text-decoration:none;background:linear-gradient(currentColor,currentColor) left bottom/0 1px no-repeat;transition:background-size .55s var(--jr-ease)}
+.discover-page .dc-cat-link::after{content:'';position:absolute;inset:0;z-index:1}
+.discover-page .dc-cat-body>p:not(.dc-meta){max-width:54ch;margin-top:14px;line-height:1.7;color:var(--color-ink)}
+.discover-page .dc-cat .jr-card-cta{margin-top:22px}
+
+.discover-page .dc-cathero{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:clamp(20px,2.4vw,36px);align-items:end;padding:clamp(40px,6vw,88px) var(--jr-pad) 0}
+.discover-page .dc-cathero-copy{grid-column:1/8;padding-bottom:clamp(8px,2vw,24px)}
+.discover-page .dc-cathero-title{font-size:clamp(2.8rem,6vw,5.6rem)}
+.discover-page .dc-cathero-media{grid-column:8/13}
+.discover-page .dc-cathero-frame{overflow:hidden;aspect-ratio:4/3;background:var(--color-mist)}
+.discover-page .dc-cathero-frame img{width:100%;height:100%;object-fit:cover}
+.discover-page .dc-catlist{padding-top:clamp(48px,6vw,88px)}
+.discover-page .dc-catlist .jr-finder{margin-top:0}
+.discover-page a.jr-tab{text-decoration:none}
+.discover-page a.jr-tab[aria-current="page"]{color:var(--color-midnight)}
+.discover-page a.jr-tab[aria-current="page"]::after{transform:scaleX(1)}
+
+/* ---------- Motion ---------- */
+@media (prefers-reduced-motion:no-preference){
+  .discover-page .dc-hero-frame,.discover-page .dc-cathero-frame{animation:jr-unveil 1.3s var(--jr-ease) .1s both}
+  .discover-page .dc-hero-frame img,.discover-page .dc-cathero-frame img,.discover-page .dc-dhero-media img{animation:jr-settle 2.2s var(--jr-ease) .1s both}
+}
+html.jr-motion .discover-page .dc-card[data-reveal=""] .dc-card-media,html.jr-motion .discover-page .dc-cat[data-reveal=""] .dc-cat-media,html.jr-motion .discover-page .dc-attraction[data-reveal=""] .dc-attraction-media{clip-path:inset(0 0 14% 0);transition:clip-path 1.2s var(--jr-ease) var(--d,0ms)}
+html.jr-motion .discover-page .dc-card.is-in .dc-card-media,html.jr-motion .discover-page .dc-cat.is-in .dc-cat-media,html.jr-motion .discover-page .dc-attraction.is-in .dc-attraction-media{clip-path:inset(0)}
+
+/* ---------- Tablet ---------- */
+@media (max-width:1100px){
+  .discover-page .dc-hero{align-items:end}
+  .discover-page .dc-hero-copy{grid-column:1/8}
+  .discover-page .dc-hero-compact .dc-hero-copy{grid-column:1/-1}
+  .discover-page .dc-hero-media{grid-column:8/13}
+  .discover-page .dc-story-copy{grid-column:1/8}
+  .discover-page .dc-story-media{grid-column:8/13}
+  .discover-page .dc-about-head{grid-column:1/-1}
+  .discover-page .dc-about-copy{grid-column:1/8}
+  .discover-page .dc-about-highlights{grid-column:9/13}
+  .discover-page .dc-section-head>.jr-eyebrow,.discover-page .dc-section-head>h2,.discover-page .dc-section-head>p:not(.jr-eyebrow){grid-column:1/-1;grid-row:auto}
+  .discover-page .dc-section-head>p:not(.jr-eyebrow){max-width:60ch;margin-top:18px}
+  .discover-page .dc-attractions{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .discover-page .dc-season-grid{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:36px}
+  .discover-page .dc-cathero-copy{grid-column:1/-1}
+  .discover-page .dc-cathero-media{grid-column:1/-1;margin-top:32px}
+  .discover-page .dc-cathero-frame{aspect-ratio:16/7}
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width:760px){
+  .discover-page .dc-hero{grid-template-columns:1fr;padding-top:28px}
+  .discover-page .dc-hero-copy,.discover-page .dc-hero-media{grid-column:1/-1}
+  .discover-page .dc-hero-media{margin-top:36px}
+  .discover-page .dc-hero-frame{aspect-ratio:4/3;max-height:none}
+  .discover-page .dc-grid,.discover-page .dc-cat-grid{grid-template-columns:1fr;row-gap:56px}
+  .discover-page .dc-card:nth-child(even of :not([hidden])),.discover-page .dc-cat:nth-child(even){padding-top:0}
+  .discover-page .dc-card-media{aspect-ratio:4/3}
+  .discover-page .dc-list-head .jr-tabs{gap:24px;margin-inline:calc(var(--jr-pad) * -1);padding-inline:var(--jr-pad);overflow-x:auto;scroll-padding-inline:var(--jr-pad);scrollbar-width:none}
+  .discover-page .dc-list-head .jr-tabs::-webkit-scrollbar{display:none}
+  .discover-page .dc-list-head .jr-tab{white-space:nowrap}
+  .discover-page .dc-dhero{min-height:clamp(480px,78svh,640px)}
+  .discover-page .dc-dhero-facts{gap:14px 28px}
+  .discover-page .dc-dhero-facts dd{font-size:1.2rem}
+  .discover-page .dc-story{grid-template-columns:1fr}
+  .discover-page .dc-story-copy,.discover-page .dc-story-media{grid-column:1/-1}
+  .discover-page .dc-story-media{margin-top:40px}
+  .discover-page .dc-story-frame{aspect-ratio:4/3}
+  .discover-page .dc-about{grid-template-columns:1fr}
+  .discover-page .dc-about-copy,.discover-page .dc-about-highlights{grid-column:1/-1}
+  .discover-page .dc-attractions{grid-template-columns:1fr}
+  .discover-page .dc-season-grid{grid-template-columns:1fr;row-gap:28px}
+  .discover-page .dc-season-tours li{grid-template-columns:1fr}
+  .discover-page .dc-cathero-frame{aspect-ratio:4/3}
+  html.jr-motion .discover-page .dc-card[data-reveal=""] .dc-card-media,html.jr-motion .discover-page .dc-cat[data-reveal=""] .dc-cat-media,html.jr-motion .discover-page .dc-attraction[data-reveal=""] .dc-attraction-media{clip-path:none}
+}
+
+@media (prefers-reduced-motion:reduce){
+  .discover-page .dc-card-media img,.discover-page .dc-cat-media img,.discover-page .dc-attraction-media img,.discover-page .dc-card-title a,.discover-page .dc-cat-link{transition:none}
+}
+
+@media print{
+  .discover-page .dc-subnav,.discover-page .dc-list-head .jr-tabs,.discover-page .jr-finder,.discover-page .jr-credits{display:none}
+  .discover-page .dc-dhero{min-height:0;background:none;color:#000}
+  .discover-page .dc-dhero-media,.discover-page .dc-dhero-shade{display:none}
+  .discover-page .dc-dhero-title,.discover-page .dc-dhero-facts dd{color:#000}
+  .discover-page .dc-experiences{background:none}
+}

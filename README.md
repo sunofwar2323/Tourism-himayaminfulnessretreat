@@ -1,38 +1,59 @@
 # Himalaya Mindfulness Retreat · Bhutan journeys
 
-A responsive, multi-page tourism website concept built with plain HTML, CSS, and JavaScript. The destination and brand direction are placeholders based on the tourism project context; replace them with the client's approved details before launch.
+Website for Himalaya Mindfulness Retreat Tours & Travels, Thimphu. Plain HTML, CSS and JavaScript with no runtime dependencies; a small Node build script prepares the deployable copy.
 
 ## Pages
 
-- `index.html` — Home
-- `about.html` — About us
-- `destinations.html` — Filterable destination directory
-- `destination-detail.html?place=paro` — Destination detail template
-- `categories.html` — Travel styles
-- `packages.html` — Filterable tour packages
-- `package-detail.html?trip=bhutan-essentials` — Package detail template
-- `travel-info.html` — Editorial Bhutan visa, immigration, and entry guide
-- `contact.html` — Contact and enquiry form
+- `index.html`: home
+- `about.html`: about us, founder and business licence
+- `destinations.html` and `destination-detail.html?place=<id>`: destination guides
+- `categories.html` and `categories.html?category=<slug>`: travel styles
+- `packages.html` and `package-detail.html?trip=<slug>`: journeys
+- `travel-info.html`: Bhutan visa, immigration and entry guide
+- `contact.html`: enquiry form
+- `privacy.html`, `terms.html`, `404.html`: static pages
 
-The Travel Information page uses `travel-info.js` for its layout and interactions, `travel-info.css` for its editorial styling, and `travel-info-data.js` as a structured copy of the publishable sections from `website info /bhutan-travel-visa-and-immigration-guide.md`. Sections 12 and 15 and the document scope are excluded from the page. After editing the source Markdown, run `python3 scripts/build_travel_info_data.py` to regenerate the page data.
+`site.js` renders the shared header and footer, the contact page and the enquiry sender. Page scripts (`home.js`, `about.js`, `discover.js`, `journeys.js`, `packages.js`, `travel-info.js`) render their own content. Fonts (`fonts/`) and GSAP 3.12.5 (`vendor/gsap/`) are self-hosted; nothing loads from third-party servers except the enquiry form submission.
 
-## Himalaya Mindfulness Retreat tour collection
+## Preview
 
-The `packages.html` and `package-detail.html?trip=<slug>` routes use `packages.js` and `packages.css`, while reusing the shared site header, footer, fonts, and palette. Tour copy is parsed from `website info /bhutan-tours-packages-new-blenders.md` into `tours.json`; `tours-data.js` is a generated mirror so the page also works when opened directly with `file://`. The schema is documented in `tours.d.ts`. The catalogue uses four itinerary-led browse categories: Cultural Immersion, Festival & Tshechu, Trekking, and Adventure & Nature. `categories.html` reads the same generated tour data so its counts and links stay in sync with the package listing. Each tour also retains its source category label.
+```sh
+python3 -m http.server 8000
+```
 
-After editing the tour Markdown, regenerate the structured data with:
+Then open `http://localhost:8000`.
+
+## Enquiry forms
+
+The contact form and the journey enquiry form post to [FormSubmit](https://formsubmit.co) (`ENQUIRY_INBOX` in `site.js`). If the request fails, visitors are offered a prefilled email link instead.
+
+The first submission from the live site triggers a FormSubmit activation email to the inbox. Click the link in that email or no enquiries will be delivered. After activation FormSubmit also offers a random alias for the address; replacing the email in `ENQUIRY_INBOX` with that alias keeps the address out of the page source.
+
+## Tour data
+
+Tour research lives in `website info /bhutan-tours-packages-new-blenders.md` (kept out of git). To regenerate the data after editing it:
 
 ```sh
 python3 scripts/build_tours_data.py
 ```
 
-The source catalogue contains 26 IDs, including one explicitly identified alias. The listing omits that alias and shows 25 public journeys. Currency, pricing basis, missing itinerary days and unconfirmed details remain marked for follow-up. Package pages use GSAP 3.12.5 from cdnjs when available; CSS/IntersectionObserver fallbacks keep the page usable if the animation scripts cannot load. Images are configured as swappable Unsplash URLs in `packages.js`.
+This writes the full research record to `tours.json` (private, kept out of git) and then runs `scripts/publicise_tours.js`, which writes `tours-data.js` with public fields only: no source URLs, verification notes or unconfirmed prices. Only `tours-data.js` is deployed.
 
-## Preview
+The travel guide data is regenerated with `python3 scripts/build_travel_info_data.py`.
 
-From this folder, run `python3 -m http.server 8000` and open `http://localhost:8000`.
+## Deploying on Vercel
 
-## Before launch
+`vercel.json` runs `node scripts/build.js` and serves `dist/`. The build:
 
-Replace `Himalaya Mindfulness Retreat`, `[CLIENT]`, sample contact details, office location, social links, team profiles, partner marks, statistics, testimonial copy, itinerary details, and starting prices with client-approved information. The contact, package enquiry, and newsletter forms currently show demo responses and need to be connected to an inbox or service. Review all travel and entry information against official sources. Photos currently load from Unsplash; use licensed, client-approved images and provide final destination-specific alt text.
-# Tourism-himayaminfulnessretreat
+- copies only public files into `dist/`;
+- makes canonical, Open Graph and JSON-LD URLs absolute;
+- writes `robots.txt` and `sitemap.xml` (pages, destination guides, travel styles and journeys);
+- re-checks `tours-data.js` and fails if private research data or Unsplash URLs appear in the output.
+
+Set the `SITE_URL` environment variable in Vercel to the final domain, for example `https://www.example.com`. Without it the build uses the project's Vercel production domain.
+
+`vercel.json` also sets the Content Security Policy and other security headers. If you add a third-party service (analytics, maps, chat), add its domain to the policy or the browser will block it.
+
+## Images
+
+Photos are stored locally in `Image/` as WebP sizes. Their licences and credits are listed in `Image/*/credits.json` and shown on the pages. Add new photos only when their licence allows reuse, and credit them the same way.
