@@ -1,0 +1,351 @@
+{
+  "_readme": "Published copy for each journey, keyed by tour ID. scripts/publicise_tours.js applies these fields over the cleaned research data when it writes tours-data.js. Only the fields listed here are replaced; IDs, slugs, durations, categories, destinations and prices always come from the tour data. Itinerary day numbers must match the tour data exactly. Strings beginning with @ refer to the shared lists. reviewNotes are for the team only and are never published.",
+  "shared": {
+    "standardInclusions": [
+      "Accommodation.",
+      "Full-board meals.",
+      "English-speaking guide.",
+      "Transport.",
+      "Monument entrance fees and the visa fee.",
+      "Unlimited bottled mineral water.",
+      "Applicable government taxes (listed as 5% GST).",
+      "Sustainable Development Fee (SDF).",
+      "A chance to try on traditional Bhutanese dress."
+    ],
+    "standardExclusions": [
+      "Medical and personal insurance.",
+      "Personal expenses.",
+      "Emergency evacuation.",
+      "Tips for your guide and driver.",
+      "Airfare.",
+      "Pony hire for the Taktsang hike.",
+      "Hot stone bath.",
+      "Rafting."
+    ],
+    "standardExclusionsWithoutRafting": [
+      "Medical and personal insurance.",
+      "Personal expenses.",
+      "Emergency evacuation.",
+      "Tips for your guide and driver.",
+      "Airfare.",
+      "Pony hire for the Taktsang hike.",
+      "Hot stone bath."
+    ],
+    "trekInclusions": [
+      "Twin-share accommodation.",
+      "Full-board meals as set out in the itinerary.",
+      "Private coach for sightseeing and transfers.",
+      "English-speaking guide.",
+      "Monument entrance fees.",
+      "Bottled drinking water each day.",
+      "A Bhutanese cultural show with mask dance.",
+      "Sustainable Development Fee (SDF) and other government taxes."
+    ],
+    "trekExclusions": [
+      "Travel insurance.",
+      "Beverages.",
+      "Personal expenses.",
+      "Tips for your guide and driver."
+    ]
+  },
+  "categories": {
+    "cultural-immersion": "Dzongs, monasteries and village life in the valleys of Bhutan, explored with a local guide at an unhurried pace.",
+    "festival-tshechu": "Journeys timed around Bhutan’s tshechus and seasonal festivals. Dates change every year, so we plan around the published calendar.",
+    "trekking": "Guided treks, from forest trails near Paro and Punakha to long, remote routes across the high Himalaya.",
+    "adventure-nature": "Birding, botanical journeys, cycling and river trips through Bhutan’s forests, valleys and mountain rivers."
+  },
+  "tours": {
+    "NB-CLS-001": {
+      "overview": "Five days and four nights in Bhutan, planned for travellers who have only a short window to visit. We build the route with you, matching the pace and places to your interests and travel dates.",
+      "highlights": [],
+      "reviewNotes": ["Only the name and length (5 days / 4 nights) are known. Route, itinerary, inclusions and exclusions need to be supplied before anything more is published."]
+    },
+    "NB-CLS-002": {
+      "overview": "Eight days across the valleys of western Bhutan: Paro, Thimphu, Punakha, Phobjikha and Haa. Fortresses and temples sit alongside high road passes, village life and the walk up to Taktsang, with time to take each place in.",
+      "highlights": [
+        "The walk up to Taktsang Monastery (Tiger’s Nest) above the Paro valley.",
+        "Mountain views from two high road passes, Dochula and Chele La.",
+        "Punakha Dzong, Rinpung Dzong, Tashichho Dzong and Kyichu Lhakhang.",
+        "Village life in the wide Phobjikha Valley.",
+        "A chance to wear the gho or kira and meet local communities."
+      ],
+      "itinerary": [
+        { "day": "1", "title": "Arrive in Paro and drive to Thimphu", "details": ["Land at Paro International Airport and travel by road to the capital.", "Overnight in Thimphu."] },
+        { "day": "2", "title": "A day in the capital", "details": ["See Thimphu from above at Buddha Point and the Sangaygang viewpoint.", "Visit the Arts and Crafts School and the Takin Preserve.", "Spend time at the National Library, the Folk Heritage Museum and Tashichho Dzong.", "Overnight in Thimphu."] },
+        { "day": "3", "title": "Over Dochula to the Punakha valley", "details": ["Cross Dochula pass, at about 3,100 m, and stop among the 108 Druk Wangyel chortens.", "Descend into the Punakha valley to visit Chimi Lhakhang and Punakha Dzong.", "Your overnight stop is named in your final itinerary."] },
+        { "day": "4–8", "title": "Phobjikha, Haa and back to Paro", "details": ["The second half of the journey covers Punakha, Phobjikha Valley, Haa Valley and Paro, including Chele La pass and the Taktsang hike.", "We share the order of these days, overnight stops and travel times when you enquire."] }
+      ],
+      "inclusions": "@standardInclusions",
+      "exclusions": "@standardExclusions",
+      "practicalInfo": "Best in spring and autumn. Moderate difficulty. The journey starts and ends in Paro. You stay in comfortable hotels or boutique lodges. Pass conditions, festival dates, opening hours and government fees can change, so we check them against your travel dates.",
+      "reviewNotes": [
+        "Day 3 overnight location and the order of Days 4–8 are unknown. Do not publish a sequence until the full itinerary is supplied.",
+        "Inclusions were in the research listing but had been hidden by an automatic filter; they are now published as listed."
+      ]
+    },
+    "NB-CLS-003": {
+      "overview": "A four-day, three-night introduction to western Bhutan, focused on Paro and Thimphu. It suits travellers who want a first look at the country’s cultural heartland in a short stay.",
+      "highlights": [
+        "Time in both Paro and Thimphu.",
+        "Temples, fortresses and other cultural landmarks.",
+        "A short four-day, three-night format."
+      ],
+      "inclusions": "@standardInclusions",
+      "exclusions": "@standardExclusionsWithoutRafting",
+      "practicalInfo": "You stay in a hotel or resort. Ask us for the day-by-day plan for your dates.",
+      "reviewNotes": ["No day-by-day itinerary is known. Sites in Paro and Thimphu are not named in the research, so none are listed."]
+    },
+    "NB-CLS-004": {
+      "overview": "Six days linking Thimphu, Punakha and Paro. The journey moves from the capital’s museums and viewpoints over Dochula to Punakha’s river valley, and ends with the walk to Taktsang.",
+      "highlights": [
+        "The hike to Taktsang Monastery (Tiger’s Nest).",
+        "Dochula pass, at about 3,100 m, and its 108 memorial chortens.",
+        "Punakha Dzong, where the Pho Chhu and Mo Chhu rivers meet.",
+        "Khamsum Yulley Namgyal Chorten above the Punakha valley.",
+        "A chance to wear traditional dress and meet local people."
+      ],
+      "itinerary": [
+        { "day": "1", "title": "Paro to Thimphu along the river", "details": ["Your guide meets you at Paro International Airport.", "Follow the Paro Chhu toward the capital, stopping at Tamchog Lhakhang and its old iron-chain bridge.", "Overnight at a hotel in Thimphu."] },
+        { "day": "2", "title": "Thimphu’s landmarks", "details": ["Visit the Memorial Chorten and Buddha Point (Kuensel Phodrang).", "See the Arts and Crafts School, the Sangaygang viewpoint and the Takin Preserve.", "Visit the National Library, the Folk Heritage Museum and Changyul Park.", "Overnight at a hotel in Thimphu."] },
+        { "day": "3", "title": "Across Dochula to Punakha", "details": ["Drive about 75 km, roughly 1 hour 45 minutes, up to Dochula pass at around 3,100 m.", "Walk among the Druk Wangyel chortens and take in the view.", "Continue down to the Punakha valley for Chimi Lhakhang and Punakha Dzong.", "Your overnight stop is named in your final itinerary."] },
+        { "day": "4–6", "title": "Khamsum Yulley, Taktsang and departure", "details": ["The final days include Khamsum Yulley Namgyal Chorten and the Taktsang hike, with departure from Paro.", "We share the order of these days and overnight stops when you enquire."] }
+      ],
+      "inclusions": "@standardInclusions",
+      "exclusions": "@standardExclusions",
+      "practicalInfo": "Best in spring and autumn. You stay in hotels or boutique lodges. The Taktsang hike is a steep walk, so a reasonable level of walking fitness helps.",
+      "reviewNotes": ["Day 3 overnight location and the order of Days 4–6 are unknown."]
+    },
+    "NB-CLS-005": {
+      "overview": "A nine-day cultural journey through Bhutan’s valleys and heritage sites. The route has not been published yet; tell us your dates and interests and we will share the current plan.",
+      "highlights": [],
+      "reviewNotes": ["Only the name and length (9 days) are known."]
+    },
+    "NB-CLS-006": {
+      "overview": "Seven days and six nights of cultural sightseeing in Bhutan. Ask us for the current route, daily plan and quotation for your travel dates.",
+      "highlights": [],
+      "reviewNotes": ["Only the name and length (7 days / 6 nights) are known. The previous overview contained an internal research note and has been replaced."]
+    },
+    "NB-FES-001": {
+      "overview": "A seven-day journey timed around the Thimphu Tshechu, the capital’s annual festival, with time to explore Thimphu itself. Festival dates change from year to year, so we plan around the published dates for your year of travel.",
+      "highlights": [],
+      "reviewNotes": ["Only the name, length (7 days) and the Thimphu Tshechu focus are known. Sightseeing, inclusions and dates need to be supplied."]
+    },
+    "NB-FES-002": {
+      "overview": "Twelve days from east to west, built around the Trashigang Tshechu. The journey pairs the festival’s mask dances with eastern valleys and highland communities, the temples of Bumthang and well-known landmarks in western Bhutan.",
+      "highlights": [
+        "Sacred mask dances at the Trashigang Tshechu.",
+        "Valleys and highland communities of eastern Bhutan.",
+        "Temples and monasteries in Bumthang.",
+        "Landmarks of the west: Punakha Dzong, Thimphu’s Buddha Dordenma and Taktsang above Paro.",
+        "A route that can be tailored, with entry and exit through Guwahati or Paro."
+      ],
+      "itinerary": [
+        { "day": "1", "title": "Guwahati to Trashigang via Samdrup Jongkhar", "details": ["Arrive in Guwahati, India, and travel to Samdrup Jongkhar on the Bhutan border for immigration formalities.", "The road then winds across eastern Bhutan to Trashigang.", "Overnight in Trashigang."] },
+        { "day": "2–12", "title": "Eastern, central and western Bhutan", "details": ["The journey continues through Trashi Yangtse, Mongar, Lhuentse, Bumthang, Punakha, Thimphu and Paro.", "We share the order of these days, festival days and overnight stops when you enquire."] }
+      ],
+      "inclusions": "@standardInclusions",
+      "exclusions": "@standardExclusions",
+      "practicalInfo": "The 2026 Trashigang Tshechu is published for 18–20 November. Festival dates can move, so we check them before you book flights. Entry and exit may be through Guwahati or Paro, and any domestic flights depend on availability. The route can be tailored.",
+      "reviewNotes": [
+        "Days 2–12 sequence, festival attendance days and overnights are unknown; the list of places is not a confirmed order.",
+        "2026 festival dates (18–20 November) are a published date, not a guarantee; check the official festival calendar."
+      ]
+    },
+    "NB-FES-003": {
+      "overview": "Fourteen days in eastern Bhutan and beyond, timed for the Chorten Kora festival. The route brings together the festival, the weaving traditions of the east, highland communities and major cultural sites further west.",
+      "highlights": [
+        "The Chorten Kora Tsechu and its rituals.",
+        "Traditional weaving in Radhi village.",
+        "Visits to the highland communities of Merak and Sakteng.",
+        "The landscapes of Bumthang, Phobjikha and Punakha."
+      ],
+      "itinerary": [
+        { "day": "1", "title": "Guwahati to Samdrup Jongkhar", "details": ["From Guwahati Airport, head south by road to Samdrup Jongkhar.", "Settle in and rest, with an evening walk through town.", "Overnight in Samdrup Jongkhar."] },
+        { "day": "2", "title": "Samdrup Jongkhar to Trashigang", "details": ["Drive about 120 km, around 4–5 hours depending on the road.", "Break the journey at Khaling’s handloom weaving centre.", "Your accommodation for the night is named in your final itinerary."] },
+        { "day": "3–14", "title": "The festival and the wider east", "details": ["The remaining days take in the festival, the weaving traditions of Radhi and the highland communities of Merak and Sakteng, then continue through central and western Bhutan.", "We share the order of these days and overnight stops when you enquire."] }
+      ],
+      "inclusions": "@standardInclusions",
+      "exclusions": "@standardExclusions",
+      "practicalInfo": "Festival dates and access to Merak and Sakteng change from year to year, so we check the Chorten Kora calendar and access conditions for your dates.",
+      "reviewNotes": [
+        "Fixed: the exclusions had been merged into the inclusions text and the exclusions list showed a stray full stop.",
+        "Day 2 accommodation and the order of Days 3–14 are unknown."
+      ]
+    },
+    "NB-FES-004": {
+      "overview": "A seven-day winter journey that pairs sightseeing in Thimphu with time in Phobjikha Valley, where black-necked cranes spend the winter.",
+      "highlights": [
+        "Sights of Thimphu, from the Memorial Chorten to Buddha Dordenma.",
+        "The drive over Dochula pass, at about 3,100 m.",
+        "Phobjikha Valley in the crane season."
+      ],
+      "itinerary": [
+        { "day": "1", "title": "Paro to Thimphu", "details": ["Your guide and driver meet you at Paro International Airport.", "Drive to Thimphu, about 1.5 hours.", "If time allows, visit Buddha Dordenma, the Memorial Chorten and the centre of Thimphu.", "Overnight at a hotel in Thimphu."] },
+        { "day": "2", "title": "Thimphu, then over the pass to Phobjikha", "details": ["Visit the Takin Preserve, the Royal Textile Academy, Simply Bhutan and the Bhutan Postal Museum as time allows.", "After lunch, drive about 4–5 hours to Phobjikha via Dochula pass."] }
+      ],
+      "inclusions": [],
+      "exclusions": [],
+      "practicalInfo": "Festival dates change from year to year, so we check the calendar before fixing your travel dates. Inclusions are set out in your quotation.",
+      "reviewNotes": ["Days 3–7, festival access and inclusions are unknown. The internal note about festival dates has been removed from the highlights."]
+    },
+    "NB-FES-005": {
+      "overview": "A festival journey to Bumthang, centred on the sacred traditions of Jambay Lhakhang. The trip length is still being finalised; ask us for the current plan and dates.",
+      "highlights": [],
+      "reviewNotes": ["Duration conflict: one listing says 11 days, another 8 days / 7 nights. The site shows ‘Duration to confirm’ until this is resolved."]
+    },
+    "NB-FES-006": {
+      "overview": "A seven-day, six-night festival journey centred on the Punakha valley. Ask us for the festival dates, route and daily plan for your year of travel.",
+      "highlights": [],
+      "reviewNotes": ["Only the name, length and Punakha focus are known."]
+    },
+    "NB-FES-007": {
+      "overview": "Seven days and six nights in western Bhutan, built around the Paro Tshechu, with time in Paro and Thimphu. We share the current itinerary and festival dates when you enquire.",
+      "highlights": [],
+      "reviewNotes": ["Only the name, length and Paro/Thimphu focus are known."]
+    },
+    "NB-FES-008": {
+      "overview": "A ten-day journey in eastern Bhutan, named for its rhododendron country and the culture of the Brokpa people. The full route is shared on request.",
+      "highlights": [],
+      "reviewNotes": ["Only the name, length (10 days / 9 nights) and an eastern Bhutan focus are known."]
+    },
+    "NB-FES-009": {
+      "overview": "A ten-day, nine-night journey into Bhutan’s highland region. Ask us for the event dates, route and daily plan.",
+      "highlights": [],
+      "reviewNotes": ["Only the name, length and a highland focus are known. The event and its location need to be supplied."]
+    },
+    "NB-TRE-001": {
+      "overview": "Eight days that begin with Paro’s cultural landmarks and the Taktsang hike, then head onto the trail. The trek follows the Paro Chhu upstream through villages and forest into high country below Jomolhari, with fully serviced camps.",
+      "highlights": [
+        "The Taktsang hike as preparation before the trek.",
+        "The trail from Sharna Zampa up the Paro Chhu valley.",
+        "Fully serviced camping on trekking days.",
+        "High mountain views around Jangothang."
+      ],
+      "itinerary": [
+        { "day": "1", "title": "Arrive in Paro (2,280 m)", "details": ["Land at Paro International Airport.", "Visit Ta Dzong (National Museum) and Rinpung Dzong, then check in.", "Overnight in Paro."] },
+        { "day": "2", "title": "Taktsang, Drukgyel Dzong and Kyichu Lhakhang", "details": ["A drive of about 30 minutes brings you to the Taktsang trailhead.", "Hike up to Taktsang Monastery, at around 3,120 m, and back, about 4–5 hours in total.", "After lunch, visit Drukgyel Dzong and Kyichu Lhakhang.", "Overnight in Paro."] },
+        { "day": "3", "title": "Onto the trail: Sharna Zampa to Thangthangkha", "details": ["Drive about an hour to Gunitsawa village, at around 2,800 m, and start walking from Sharna Zampa.", "The trail follows the Paro Chhu past villages and farms, through pine and rhododendron forest.", "About 18–20 km and 6–7 hours on foot, to camp at around 3,610 m.", "Overnight in camp at Thangthangkha."] },
+        { "day": "4–8", "title": "Into the high country and back", "details": ["The trek continues to the Jangothang area, where hikes reach about 4,100 m, before the return.", "We share the camp sequence, daily distances and final transfers when you enquire."] }
+      ],
+      "inclusions": "@trekInclusions",
+      "exclusions": "@trekExclusions",
+      "practicalInfo": "Medium difficulty. About 80–85 km on foot, with the highest camp at around 4,040 m. Best from April to June and from September to November. Ask us for the current altitude profile, and check that your insurance covers trekking at altitude and evacuation.",
+      "reviewNotes": ["Days 4–8 camp sequence, distances and exit are unknown. Destination list (Gasa, Laya) in the research does not obviously match a Jomolhari route and needs reconciling."]
+    },
+    "NB-TRE-002": {
+      "overview": "A 28-day expedition across the remote high Himalaya of northern Bhutan, through the Lingshi, Laya and Lunana regions. Rated extremely hard, with a high point of about 5,470 m at Rinchen Zoe La, it is for experienced high-altitude trekkers.",
+      "highlights": [
+        "The remote Lingshi, Laya and Lunana regions.",
+        "High mountain passes and long stretches of wilderness.",
+        "Full-service camping on trekking days."
+      ],
+      "inclusions": "@trekInclusions",
+      "exclusions": "@trekExclusions",
+      "practicalInfo": "Rated extremely hard, with a maximum altitude of about 5,470 m. Hotel nights in Paro, Thimphu and Punakha frame the trek. A medical check, suitable insurance and an evacuation plan are essential; we go through these with you before booking.",
+      "reviewNotes": ["No daily itinerary is known. A full schedule with acclimatisation, camps, passes, contingency days and exit is required before sale."]
+    },
+    "NB-TRE-003": {
+      "overview": "An 18-day high-altitude trek toward Gangkhar Puensum, combining acclimatisation days, yak-herder routes, mountain passes and time in rural communities. The full route and altitude profile are shared on request.",
+      "highlights": [
+        "High Himalayan scenery.",
+        "Old mountain trails and rural life.",
+        "Acclimatisation days built into the trek."
+      ],
+      "itinerary": [
+        { "day": "1", "title": "Arrive in Paro", "details": ["Land at Paro International Airport.", "Visit Ta Dzong (National Museum) and Rinpung Dzong.", "Walk through Paro town.", "Overnight at a hotel in Paro."] }
+      ],
+      "practicalInfo": "A high-altitude expedition. Ask us for the full route, camping plan, acclimatisation schedule and altitude profile.",
+      "reviewNotes": ["Only Day 1 is known. Days 2–18 show as ‘not yet published’ on the site."]
+    },
+    "NB-TRE-004": {
+      "overview": "A walking journey east from Punakha toward Trongsa on sections of the Trans Bhutan Trail, through rice paddies, forest, temples and farming villages.",
+      "highlights": [
+        "Lingmukha Valley and a temple linked to Tertoen Dorji Lingpa.",
+        "Forest paths and village walking.",
+        "Samtengang and views over the Shar valleys.",
+        "A possible traditional hot stone bath."
+      ],
+      "itinerary": [
+        { "day": "1", "title": "Punakha to Lingmukha Valley", "details": ["Meet your guide at your hotel in Punakha.", "Walk east through rice paddies, with lunch at a chorten viewpoint.", "Drop down into Lingmukha Valley, home to a temple linked with Tertoen Dorji Lingpa.", "About 12.5 km and 7 hours, with 1,123 m of ascent and a high point of 2,190 m.", "Overnight at a Trans Bhutan Trail campsite."] },
+        { "day": "2", "title": "Lingmukha to Samtengang", "details": ["Rejoin the Trans Bhutan Trail as it passes through rainforest.", "Cross a pass with views over the Shar valleys and call in at Chungse Azhe Gyalzom temple.", "Stop for lunch in Chungseykha village, at a local restaurant.", "Walk on through farming villages to Samtengang."] }
+      ],
+      "practicalInfo": "The trail is listed at six nights. The first two days involve long walks with steady climbs. Ask us for the exact trip length, daily distances, total ascent and trail conditions.",
+      "reviewNotes": ["Duration is listed as six nights but no day count is set in the data. Day 2 overnight and all later days are unknown."]
+    },
+    "NB-TRE-005": {
+      "overview": "A nine-day trekking journey between Paro and Thimphu that combines the Druk Path with the Tsaluna trail. The plan can be adjusted; we share the current route, camps and altitude profile on request.",
+      "highlights": [],
+      "reviewNotes": ["Only the name, length (9 days, customisable) and Paro/Thimphu are known."]
+    },
+    "NB-NAT-001": {
+      "overview": "Twelve days for plant lovers, moving through Bhutan’s changing forest and altitude zones. The journey visits botanical gardens and three national parks, with an eye on orchids, rhododendrons and medicinal plants.",
+      "highlights": [
+        "The Biodiversity Centre in Thimphu.",
+        "The Botanical Park at Lamperi.",
+        "Jigme Dorji Wangchuck National Park.",
+        "Jigme Singye Wangchuck National Park.",
+        "Thrumshingla National Park.",
+        "Orchids, rhododendrons and medicinal plants; what is in flower depends on the season."
+      ],
+      "inclusions": "@standardInclusions",
+      "exclusions": "@standardExclusions",
+      "practicalInfo": "Suggested months are March to July, September, October and December. You stay in a hotel or resort. Flowering times and national park access vary, so we check both for your dates.",
+      "reviewNotes": ["No day-by-day itinerary is known. Entry via Paro is listed; the route between the parks is not."]
+    },
+    "NB-NAT-002": {
+      "overview": "A ten-day nature journey for travellers drawn to Bhutan’s birdlife and old forests. The route and daily plan are available on request.",
+      "highlights": [],
+      "reviewNotes": ["Only the name and length (10 days / 9 nights) are known."]
+    },
+    "NB-NAT-003": {
+      "overview": "A twelve-day journey focused on birdwatching in Bhutan. We share the current route, season advice and daily plan when you enquire.",
+      "highlights": [],
+      "reviewNotes": ["Only the name and length (12 days) are known."]
+    },
+    "NB-ADV-001": {
+      "overview": "Seven days seeing western Bhutan by bicycle. Road rides link Paro, Thimphu and Punakha, with stops at dzongs, temples and villages and a long descent from Dochula.",
+      "highlights": [
+        "Paro to Thimphu by bike, about 65 km and 5 hours.",
+        "Dochula to Punakha by bike, about 71 km and 5–6 hours.",
+        "The valleys of Punakha and Phobjikha.",
+        "The Taktsang hike and other landmark sites.",
+        "In winter, a chance to see black-necked cranes in Phobjikha, if dates and conditions allow."
+      ],
+      "itinerary": [
+        { "day": "1", "title": "Arrive in Paro (2,280 m)", "details": ["Land at Paro International Airport.", "Visit Ta Dzong (National Museum) and explore the Paro valley.", "Overnight in Paro."] },
+        { "day": "2", "title": "Ride from Paro to Thimphu", "details": ["Cycle about 65 km along the Paro Chhu to Thimphu, roughly five hours.", "The road passes willow and poplar trees, terraced fields and traditional farmhouses.", "In Thimphu, visit Changyul Park and the Memorial Chorten, then explore the town.", "Overnight in Thimphu."] },
+        { "day": "3", "title": "Dochula to Punakha", "details": ["Visit Buddha Point and Simply Bhutan, then transfer up to Dochula pass at 3,100 m.", "Ride about 71 km down to Punakha, 5–6 hours depending on pace.", "Overnight in Punakha."] },
+        { "day": "4", "title": "Punakha, then toward Phobjikha", "details": ["Visit Punakha Dzong and Chimi Lhakhang.", "Head toward Phobjikha on highland roads, about 3–4 hours to the Lawa La area.", "Which sections are ridden and which are driven is set out in your final itinerary."] },
+        { "day": "5–7", "title": "Final riding days and departure", "details": ["We share the plan for the last three days, including riding sections and departure, when you enquire."] }
+      ],
+      "inclusions": "@standardInclusions",
+      "exclusions": "@standardExclusions",
+      "practicalInfo": "Best in spring (March to May) and autumn (September to November). You stay in hotels or boutique lodges. Some riding days are long with big changes in height. Ask us for the route profile, bike specification, helmets and the support vehicle.",
+      "reviewNotes": ["Day 4 ride/drive split and Days 5–7 are unknown. The Taktsang hike is listed as a highlight but its day is unknown."]
+    },
+    "NB-ADV-002": {
+      "overview": "Seven days on the rivers of western Bhutan for intermediate to expert paddlers, with sightseeing in Paro, Thimphu and Punakha. River sections range widely in difficulty, and some run only in certain seasons.",
+      "highlights": [
+        "Paro Chhu: 10 km, about 1–2 hours, Class III–IV, by kayak.",
+        "Upper Pho Chhu: 12 km, about 5–7 hours, Class V, kayaks only.",
+        "Dang Chhu sections rated Class III–V, in summer.",
+        "Punakha Dzong, Khamsum Yulley Namgyal Chorten and the landmarks of Thimphu."
+      ],
+      "itinerary": [
+        { "day": "1", "title": "Arrive in Paro", "details": ["Land at Paro International Airport.", "Visit Ta Dzong (National Museum), Rinpung Dzong and Paro town.", "Overnight at a hotel in Paro."] },
+        { "day": "2", "title": "Paddle the Paro Chhu", "details": ["Drive to Bondey and paddle 10 km toward Isuna, about 1–2 hours, Class III–IV, by kayak.", "Lunch at Isuna, then transfer to Thimphu.", "Visit the Postal Museum, Changyul Park and Tashichho Dzong.", "Overnight in Thimphu."] },
+        { "day": "3", "title": "A day in Thimphu", "details": ["As time allows, visit the Memorial Chorten, Buddha Point, Simply Bhutan, the Folk Heritage Museum, the School of Arts and Traditional Crafts and the Takin Preserve.", "Overnight in Thimphu."] },
+        { "day": "4", "title": "Over Dochula to Punakha", "details": ["Drive over Dochula pass at 3,100 m, past the 108 Druk Wangyel chortens.", "Visit Chimi Lhakhang and Punakha Dzong.", "Overnight in Punakha."] },
+        { "day": "5", "title": "Punakha’s rivers", "details": ["Upper Pho Chhu: Wangthangkha to Samdingkha, 12 km, 5–7 hours, Class V, kayaks only.", "Lower Mo Chhu: Khamsum Yulley Namgyal Chorten to Punakha Dzong, 6 km, about an hour, Class I–II.", "Overnight at a hotel in Punakha."] },
+        { "day": "6", "title": "Dang Chhu (summer only)", "details": ["Upper Dang Chhu, 3 km, about 2 hours, Class IV–V.", "Middle Dang Chhu, 5 km, about 1.5 hours, Class IV–V.", "Lower Dang Chhu, 17 km, about 4 hours, Class III–IV.", "Transfer to Paro in the afternoon.", "Overnight at a hotel in Paro."] },
+        { "day": "7", "title": "Departure", "details": ["Transfer to Paro International Airport for your onward flight."] }
+      ],
+      "inclusions": "@standardInclusions",
+      "practicalInfo": "Suited to intermediate to expert paddlers. Best in summer (June to August) for the Paro and Wangdue rivers; some sections may run in March–April and November–December. Ask us about the skill level required, equipment, helmets and buoyancy aids, river-level limits, guide-to-guest ratios, the rescue plan and insurance.",
+      "reviewNotes": [
+        "Rafting conflict: rafting is listed as an exclusion although the Lower Mo Chhu section is described for kayaks or rafts. Raft wording stays hidden and exclusions are shown on request until the client clarifies.",
+        "Day 3 sightseeing and the Lower Mo Chhu section were in the research itinerary but had been hidden; they are now published (craft type omitted)."
+      ]
+    }
+  }
+}

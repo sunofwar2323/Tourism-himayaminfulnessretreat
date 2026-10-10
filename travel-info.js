@@ -6,7 +6,7 @@
     1: ['Entry requirements by nationality', 'The right document depends on nationality and passport type. Start with the overview, then open the details for your category.'],
     2: ['Bhutan tourist visa application', 'A clear sequence from checking your category through arrival formalities.'],
     3: ['Entry permits for regional travellers', 'Understand the difference between a visa, entry permit, route permit, and area-specific permit.'],
-    4: ['Sustainable Development Fee (SDF)', 'See how the government tourism levy is described in the source guide, and what still needs confirmation.'],
+    4: ['Sustainable Development Fee (SDF)', 'How the government tourism levy works, the published rates, and what to check before you pay.'],
     5: ['Visa, permit and travel fees', 'A practical fee summary, with unverified amounts and private charges clearly identified.'],
     6: ['Required documents and checklists', 'Prepare the documents that apply to your category and keep key confirmations accessible.'],
     7: ['Entering Bhutan by air and land', 'Arrival notes for Paro International Airport, land entry from India, and practical arrival steps.'],
@@ -15,7 +15,7 @@
     10: ['Booking and payment procedures', 'Separate the government process from private agency booking and payment terms.'],
     11: ['Frequently asked questions', 'Search common questions about visas, SDF, entry permits, insurance, and arrival.'],
     13: ['Official resources and contacts', 'Use official Bhutanese immigration and tourism sources to confirm your own requirements.'],
-    14: ['Before you travel, please confirm', 'A final check of the details the source guide says may need current, direct confirmation.']
+    14: ['Before you travel, please confirm', 'A final check of the details that can change and are worth confirming directly with the authorities.']
   };
   const ids = {1:'entry-requirements',2:'tourist-visa-application',3:'regional-entry-permits',4:'sustainable-development-fee',5:'visa-permit-travel-fees',6:'document-checklists',7:'entering-bhutan',8:'extensions-special-cases',9:'immigration-customs',10:'booking-payment',11:'frequently-asked-questions',13:'official-resources',14:'before-you-travel'};
   const escapeHtml = s => s.replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));

@@ -36,8 +36,8 @@
     const usable = sentences.filter(sentence => !/(?:the source|accessible (?:summary|extract|overview)|indexed overview|not available|not specified|confirm against|verification required)/i.test(sentence));
     return usable.join(' ').trim() || 'More journey details are available on request.';
   };
-  const displayHighlights = tour => (tour.highlights || []).filter(item => !/(?:source|verification|confirmation required|require confirmation|not available|verify )/i.test(item) && !(tour.id === 'NB-ADV-002' && /raft/i.test(item)));
-  const publicDetails = (lines, tour) => (lines || []).filter(line => !/(?:source (?:page )?(?:says|lists|confirms|describes)|confirm against|verify |verification required|not available|not fully available|do not infer|requires confirmation)/i.test(line) && !(tour?.id === 'NB-ADV-002' && /raft/i.test(line)));
+  const displayHighlights = tour => (tour.highlights || []).filter(item => !/(?:source|verification|confirmation required|require confirmation|not available|verify )/i.test(item) && !(tour.id === 'NB-ADV-002' && /\braft/i.test(item)));
+  const publicDetails = (lines, tour) => (lines || []).filter(line => !/(?:source (?:page )?(?:says|lists|confirms|describes)|confirm against|verify |verification required|not available|not fully available|do not infer|requires confirmation)/i.test(line) && !(tour?.id === 'NB-ADV-002' && /\braft/i.test(line)));
   const priceView = tour => tour.proposedPrice == null
     ? `<button type="button" class="tour-price-quote open-enquiry" data-tour="${escapeHtml(tour.slug)}">Request a Quote</button>`
     : `<span class="tour-price-value">${escapeHtml(tour.proposedPriceDisplay)}</span><span class="price-note" tabindex="0" title="Currency and pricing basis to be confirmed">Currency &amp; basis to be confirmed</span>`;
@@ -346,7 +346,7 @@
     if (!kept) return '';
     return capitalise(kept.replace(/\s{2,}/g, ' ').replace(/\s+([,.;])/g, '$1').replace(/[;,]\s*$/, '')).replace(/([^.!?])$/, '$1.');
   }).filter(Boolean).join(' ');
-  const cleanList = (lines, tour) => (lines || []).map(cleanText).filter(line => line && !(tour.id === 'NB-ADV-002' && /raft/i.test(line)));
+  const cleanList = (lines, tour) => (lines || []).map(cleanText).filter(line => line && !(tour.id === 'NB-ADV-002' && /\braft/i.test(line)));
   const durationText = tour => {
     if (tour.durationNeedsConfirmation) return 'Duration to confirm';
     const match = (tour.duration || '').match(/^\d+\s+days?(?:\s*\/\s*\d+\s+nights?)?/i);

@@ -98,16 +98,16 @@
         { id: 'taktsang', name: 'Taktsang Monastery (Tiger’s Nest)', image: 'heritage-taktsang', match: /taktsang|tiger'?s nest/i, text: 'Bhutan’s best-known monastery clings to a sheer cliff high above the valley floor. It was built in 1692 around a cave associated with Guru Rinpoche, badly damaged by fire in 1998 and later restored.', info: 'Reached on foot by a steep forest trail.' },
         { id: 'rinpung-dzong', name: 'Rinpung Dzong', image: 'paro', match: /rinpung|paro dzong/i, text: 'Built in the 17th century under Zhabdrung Ngawang Namgyal, the “fortress on a heap of jewels” houses Paro’s district administration and monastic body. Its courtyard hosts the annual Paro Tshechu.' },
         { id: 'national-museum', name: 'National Museum (Ta Dzong)', image: 'national-museum-paro', match: /national museum|ta dzong/i, text: 'The round Ta Dzong watchtower above Rinpung Dzong became the National Museum of Bhutan in 1968. Its collections span Bhutanese art, ritual objects and natural history.' },
-        { id: 'kyichu-lhakhang', name: 'Kyichu Lhakhang', image: 'kyichu-lhakhang', match: /kyichu/i, text: 'One of the oldest temples in Bhutan, traditionally attributed to Songtsen Gampo in the 7th century. It remains an active place of worship visited by local families.' },
+        { id: 'kyichu-lhakhang', name: 'Kyichu Lhakhang', image: 'kyichu-lhakhang', match: /kyichu/i, text: 'Among the oldest temples in Bhutan, and still an active place of worship visited by local families.' },
         { id: 'drukgyel-dzong', name: 'Drukgyel Dzong', image: 'drukgyel-dzong', match: /dru[kg]+ye?l/i, text: 'The fortress at the head of the valley commemorates victory over Tibetan forces. It was gutted by fire in 1951 and has since been undergoing reconstruction.' },
         { id: 'chele-la', name: 'Chele La', image: 'chele-la', match: /chele ?la/i, text: 'A high road pass between Paro and Haa, strung with prayer flags. On clear days the views reach across forested ridges towards the mountains.' },
       ],
       experiences: [
-        ['Walk to Taktsang', 'The climb through blue pine forest to the monastery viewpoint is one of the defining walks in Bhutan.'],
+        ['Walk to Taktsang', 'A steady climb through blue pine forest to a viewpoint facing the monastery, then on to the temple itself. Allow most of a day.'],
         ['Paro Tshechu', 'The spring festival at Rinpung Dzong fills the courtyard with masked dances. Dates follow the lunar calendar and change each year.'],
         ['Valley life', 'Farmhouses, rice terraces and the small town along the river show everyday life in the west.'],
       ],
-      seasonNote: 'The Paro Tshechu is held in spring; confirm the year’s dates before planning around it.',
+      seasonNote: 'The Paro Tshechu falls in spring. Its dates move each year, so we check them before you book flights.',
     },
     {
       id: 'thimphu', name: 'Thimphu', region: 'Western Bhutan', image: 'heritage-tashichho', cardImage: 'thimphu',
@@ -132,9 +132,9 @@
       experiences: [
         ['Archery', 'Watch teams compete over long distances, with cheering and celebration after every hit.'],
         ['Weaving and crafts', 'Bhutanese textiles such as the kira are woven by hand on traditional looms.'],
-        ['Thimphu Tshechu', 'One of the largest festivals in the country, held in autumn at Tashichho Dzong. Dates follow the lunar calendar.'],
+        ['Thimphu Tshechu', 'A major autumn festival of masked dances in the courtyard of Tashichho Dzong.'],
       ],
-      seasonNote: 'The Thimphu Tshechu is held in autumn; confirm the year’s dates before planning around it.',
+      seasonNote: 'Autumn brings the Thimphu Tshechu and some of the clearest weather of the year; festival dates change annually.',
     },
     {
       id: 'punakha', name: 'Punakha', region: 'Western Bhutan', image: 'heritage-punakha', cardImage: 'punakha',
@@ -142,14 +142,14 @@
       highlights: ['Punakha Dzong', 'Chimi Lhakhang', 'Dochula pass'],
       history: [
         'Punakha served as Bhutan’s capital until 1955. Punakha Dzong was built in 1637–38 by Zhabdrung Ngawang Namgyal and remains the winter residence of the Je Khenpo and the Central Monk Body.',
-        'In 1907 the dzong hosted the coronation of Ugyen Wangchuck, the first King of Bhutan, which makes it one of the most significant buildings in the kingdom’s history.',
+        'In 1907 the dzong hosted the coronation of Ugyen Wangchuck, the first King of Bhutan, a defining moment in the kingdom’s history.',
       ],
       about: [
         'Lower and warmer than Thimphu, the valley is known for rice fields and mild winters. The road from Thimphu crosses Dochula, where 108 chortens stand on the pass.',
         'Footpaths lead through the fields to village temples and across long suspension bridges over the rivers.',
       ],
       places: [
-        { id: 'punakha-dzong', name: 'Punakha Dzong', image: 'heritage-punakha', match: /punakha dzong/i, text: 'Built in 1637–38 at the confluence of two rivers, the dzong is the winter seat of the Je Khenpo and one of the most admired buildings in Bhutan.' },
+        { id: 'punakha-dzong', name: 'Punakha Dzong', image: 'heritage-punakha', match: /punakha dzong/i, text: 'Built in 1637–38 at the confluence of two rivers, the dzong is the winter seat of the Je Khenpo, known for its carved woodwork and riverside setting.' },
         { id: 'chimi-lhakhang', name: 'Chimi Lhakhang', image: 'chimi-lhakhang', match: /chimi/i, text: 'A temple on a low hill among rice fields, associated with the 15th-century saint Drukpa Kunley, known as the Divine Madman.' },
         { id: 'khamsum-yulley', name: 'Khamsum Yulley Namgyal Chorten', image: 'khamsum-yulley', match: /khamsum|yulley/i, text: 'A tiered hilltop temple above the Mo Chhu, reached by a walk up through fields and pine forest.' },
         { id: 'punakha-bridge', name: 'Punakha suspension bridge', image: 'punakha-bridge', match: /suspension bridge/i, text: 'A long footbridge draped in prayer flags that spans the Pho Chhu near the dzong.' },
@@ -199,7 +199,7 @@
         'The Chumey valley is known for yathra, a woven woollen textile, and Jakar is the main town.',
       ],
       places: [
-        { id: 'jambay-lhakhang', name: 'Jambay Lhakhang', image: 'jambay-lhakhang', match: /jambay/i, text: 'One of Bhutan’s oldest temples, traditionally attributed to Songtsen Gampo, and the setting of the autumn Jambay Lhakhang Drup.' },
+        { id: 'jambay-lhakhang', name: 'Jambay Lhakhang', image: 'jambay-lhakhang', match: /jambay/i, text: 'An ancient temple in the Choekhor valley and the setting of the autumn Jambay Lhakhang Drup.' },
         { id: 'kurjey-lhakhang', name: 'Kurjey Lhakhang', image: 'kurjey-lhakhang', match: /kurje/i, text: 'A temple complex built around the rock where Guru Rinpoche is said to have meditated and left the imprint of his body.' },
         { id: 'tamshing-lhakhang', name: 'Tamshing Lhakhang', image: 'tamshing-lhakhang', match: /tamshing/i, text: 'Founded in 1501 by Pema Lingpa, the temple is known for its old wall paintings.' },
         { id: 'jakar-dzong', name: 'Jakar Dzong', image: 'bumthang', match: /jakar dzong/i, text: 'The district’s fortress on a ridge above the Choekhor valley and the town of Jakar.' },
@@ -277,7 +277,7 @@
         ['Trashigang Tshechu', 'The winter festival fills the dzong courtyard with masked dances. Dates follow the lunar calendar.'],
         ['The far east', 'Long drives through gorges and terraced hills reveal a side of Bhutan few visitors see.'],
       ],
-      seasonNote: 'The Trashigang Tshechu is held in winter; confirm the year’s dates before planning around it.',
+      seasonNote: 'The Trashigang Tshechu takes place in winter. Ask us for this year’s dates, as they shift with the Bhutanese calendar.',
     },
   ];
 
