@@ -4,7 +4,7 @@
 (() => {
   'use strict';
 
-  /* 4:5 crops of Image/Logo/about-us-founder.jpeg. If photo is emptied, a labelled placeholder is shown instead. */
+  /* 4:5 crops of Image/about/Founders-Image.png. If photo is emptied, a labelled placeholder is shown instead. */
   const FOUNDER = {
     name: 'Bikash',
     title: 'Founder, Himalaya Mindfulness Retreat Tours & Travels',
