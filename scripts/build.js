@@ -19,7 +19,7 @@ const DIRS = ['Image', 'fonts', 'vendor'];
 const PRIVATE = new Set(['tours.d.ts']);
 const EXCLUDED_ASSETS = new Set(['Image/Logo/about-us-founder.jpeg', 'Image/about/Founders-Image.png', 'Image/Logo/logo.png']);
 const EXCLUDED_NAMES = new Set(['.DS_Store', 'credits.json']);
-const LISTED_PAGES = ['index.html', 'about.html', 'destinations.html', 'categories.html', 'packages.html', 'travel-info.html', 'contact.html', 'privacy.html', 'terms.html'];
+const LISTED_PAGES = ['index.html', 'about.html', 'destinations.html', 'categories.html', 'packages.html', 'travel-info.html', 'contact.html', 'privacy.html', 'terms.html', 'policy.html'];
 
 function siteUrl() {
   const raw = process.env.SITE_URL
